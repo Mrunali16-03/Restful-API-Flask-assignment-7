@@ -1,0 +1,1063 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FaDaYWwU9Ynn"
+      },
+      "source": [
+        "# Theory Questions\n",
+        "\n",
+        "---\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "N3C4bqFh9mfS"
+      },
+      "source": [
+        "**1. What is a RESTful API?**\n",
+        "\n",
+        "A RESTful API qq(Representational State Transfer Application Programming Interface) is a way for two computer systems to communicate over the internet using standard HTTP methods. It follows the principles of the REST architectural style, which makes web services simple, scalable, and stateless.\n",
+        "Key features of a RESTful API:\n",
+        "\n",
+        "1. Stateless – Each request from a client must contain all the information needed to process it. The server does not store session data between requests.\n",
+        "\n",
+        "2. Resource-based – Everything is treated as a resource (e.g., users, products, posts) and is identified by a unique URL.\n",
+        "\n",
+        "3. Standard HTTP Methods – RESTful APIs typically use:\n",
+        "\n",
+        "GET → Retrieve data\n",
+        "\n",
+        "POST → Create new data\n",
+        "\n",
+        "PUT/PATCH → Update existing data\n",
+        "\n",
+        "DELETE → Remove data\n",
+        "\n",
+        "4. Data formats – Commonly uses JSON or XML for data exchange (JSON is more popular)."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wtbkkYxj-0TW"
+      },
+      "source": [
+        "**2. Explain the concept of API specificatxt**\n",
+        "\n",
+        "- An API specification is a detailed, structured description of how an API behaves and how it should be used. It serves as a contract between the API provider and the API consumer (developer), defining the endpoints, data formats, methods, request/response structure, and authentication requirement\n",
+        "Specification\n",
+        "\n",
+        "- Endpoints (URLs): Define where the API resources are located (e.g., /api/users).\n",
+        "\n",
+        "- HTTP Methods : State which HTTP methods are allowed (GET, POST, PUT, DELETE)\n",
+        "\n",
+        "- Request Parameter: Explain what data the client must send (e.g., JSON body, query parameters)\n",
+        "\n",
+        "- Request Response Formats: Describe the structure of the data returned (e.g., JSON or XML).\n",
+        "\n",
+        "- Response Codes :\n",
+        "\n",
+        "Authentication/Authorization\n",
+        "\n",
+        "Data Models/Schemas"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aVE5zR1XBmBs"
+      },
+      "source": [
+        "**3. What is Flask, and why is it popular for building APIs?**\n",
+        "\n",
+        "- Flask is a lightweight, open-source web framework in Python.\n",
+        "It helps developers build web applications and APIs quickly.\n",
+        "\n",
+        "- It is called a micro-framework because it doesn’t come with many built-in features (like authentication or database handling). Instead, you add only the extensions you need\n",
+        "\n",
+        "Why Flask Is Popular for Building APIs:-\n",
+        "\n",
+        "- It is known for its simplicity\n",
+        "- Minimalist and Lightweight\n",
+        "- Quick and Easy to Learn\n",
+        "- Flexible and Unopinionated\n",
+        "- Built-in Development Server\n",
+        "- Large Ecosystem\n",
+        "- Good Integration with Other Tools"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "73KKG2FzCSpN"
+      },
+      "source": [
+        "**4. What is routing in Flask?**\n",
+        "\n",
+        "- Routing in Flask means mapping a URL (web address) to a specific function in your application. When someone visits a URL, Flask looks for a function associated with that URL (called a view function) and executes it.\n",
+        "- In simple terms: URL → Function → Response"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wc3DzXOfC2P5"
+      },
+      "source": [
+        "**5. How do you create a simple Flask application?**\n",
+        "\n",
+        "- To create a simple Flask application step by step:-\n",
+        "- Install Flask\n",
+        "- Create your flask App File\n",
+        "- Run the flask app"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BAV3rXJKGWqd"
+      },
+      "source": [
+        "**6. What are HTTP methods used in RESTful APIs?**\n",
+        "\n",
+        "- In RESTful APIs, HTTP methods define the type of operation the client wants to perform on a resource (such as users, products, posts, etc.). Each method has a specific purpose.\n",
+        "- Common HTTP Methods in REST APIs\n",
+        "\n",
+        "- GET → Retrieve data from the server (read).\n",
+        "\n",
+        "- POST → Send data to the server (create).\n",
+        "\n",
+        "- PUT → Update an existing resource (replace).\n",
+        "\n",
+        "- PATCH → Update part of an existing resource (partial update).\n",
+        "\n",
+        "- DELETE → Remove a resource from the server."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ReUZqG3FGv4D"
+      },
+      "source": [
+        "**7. What is the purpose of the @app.route() decorator in Flask?**\n",
+        "\n",
+        "- The @app.route() decorator in Flask is used to map a URL (route) to a function in your application.\n",
+        "\n",
+        "- When a user visits that URL, Flask executes the function and returns the response.\n",
+        "\n",
+        "- Without @app.route(), Flask wouldn’t know which function to run for a given URL"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Ms6kawYwHIwg"
+      },
+      "source": [
+        "**8. What is the difference between GET and POST HTTP methods?**\n",
+        "\n",
+        "- Difference between GET and POST HTTP Methods\n",
+        "\n",
+        "**GET Method**\n",
+        "\n",
+        "- Used to request data from the server.\n",
+        "\n",
+        "- Sends data as URL parameters (e.g., example.com/page?name=John).\n",
+        "\n",
+        "- Data is visible in the URL.\n",
+        "\n",
+        "- Typically used for reading/fetching information.\n",
+        "\n",
+        "- Safe and idempotent → repeating the same GET request doesn’t change data.\n",
+        "\n",
+        "**POST Method**\n",
+        "\n",
+        "- Used to send data to the server (to create or update resources).\n",
+        "\n",
+        "- Sends data in the request body, not the URL.\n",
+        "\n",
+        "- Data is not visible in the URL.\n",
+        "\n",
+        "- Typically used for form submissions, login, file uploads.\n",
+        "\n",
+        "- Not idempotent → repeating the same POST request may create duplicate records"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Edf0F4WCq2as"
+      },
+      "source": [
+        "**9. How do you handle errors in Flask APIs?**\n",
+        "\n",
+        "- Handling errors in Flask APIs ensures that your application returns clear, consistent, and meaningful responses when something goes wrong. Flask provides multiple tools for catching and responding to errors gracefully.\n",
+        "\n",
+        "- Using abort() to Trigger HTTP Errors\n",
+        "Custom Error Handlers (@app.errorhandler)\n",
+        "Try/Except Blocks for Manual Error Handling\n",
+        "Raise HTTP Exceptions with werkzeug"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lq0u1a2Iqo0G"
+      },
+      "source": [
+        "**10. How do you connect Flask to a SQL database?**\n",
+        "\n",
+        "- Connecting Flask to a SQL database is commonly done using an ORM (Object-Relational Mapper) like SQLAlchemy, which makes database interactions easier and more Pythonic.\n",
+        "\n",
+        "- Install Required Packages\n",
+        "Set Up Flask and SQLAlchemy\n",
+        "Define Database Models\n",
+        "Create the Database and Tables\n",
+        "Use Models to Perform CRUD Operation."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1OT2APvvqFoD"
+      },
+      "source": [
+        "**11. What is the role of Flask-SQLAlchemy?**\n",
+        "\n",
+        "- Flask-SQLAlchemy is an extension for Flask that makes it easier to work with SQL databases using SQLAlchemy ORM (Object Relational Mapper).\n",
+        "\n",
+        "- Instead of writing raw SQL queries (SELECT, INSERT, UPDATE, DELETE), you can interact with the database using Python classes and objects.\n",
+        "\n",
+        "**Key Roles:**\n",
+        "\n",
+        "- Database Connection → Simplifies connecting Flask to databases like SQLite, MySQL, PostgreSQL.\n",
+        "\n",
+        "- ORM (Object Relational Mapping) → Lets you represent database tables as Python classes and rows as objects.\n",
+        "\n",
+        "- CRUD Operations → Makes it easy to create, read, update, and delete data without writing SQL manually.\n",
+        "\n",
+        "- Schema Management → Handles table creation automatically from models (db.create_all()).\n",
+        "\n",
+        "- Integration → Works seamlessly with Flask routes and apps."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7L5LwRskpsJC"
+      },
+      "source": [
+        "**12. What are Flask blueprints, and how are they useful?**\n",
+        "\n",
+        "- Flask Blueprints are a way to organize your Flask application into smaller, reusable modules. Instead of writing all routes, views, and logic in a single app.py file, you can divide your app into blueprints (like mini-apps) and then register them with the main Flask application.\n",
+        "This makes your code cleaner, modular, and easier to maintain (especially in large projects).\n",
+        "\n",
+        "Benefits of Blueprints\n",
+        "\n",
+        "- Modularity → Split code into multiple files.\n",
+        "\n",
+        "- Reusability → Same blueprint can be reused in different projects.\n",
+        "\n",
+        "- Scalability → Makes large apps easier to maintain.\n",
+        "\n",
+        "- Clarity → Separates routes, models, and business logic."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9DusdYWppIxp"
+      },
+      "source": [
+        "**13. What is the purpose of Flask's request object?**\n",
+        "\n",
+        "- The request object in Flask represents the HTTP request that a client (like a browser or API consumer) sends to your Flask application.\n",
+        "It allows you to access important details of the request, such as:\n",
+        "\n",
+        "- Request method → (GET, POST, etc.)\n",
+        "\n",
+        "- Form data → data submitted through an HTML form\n",
+        "\n",
+        "- Query parameters → data in the URL (e.g., ?name=John)\n",
+        "\n",
+        "- JSON data → sent in APIs\n",
+        "\n",
+        "Headers, cookies, files, etc."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UCp1X-UTo0Yc"
+      },
+      "source": [
+        "**14. How do you create a RESTful API endpoint using Flask?**\n",
+        "\n",
+        "- Creating a RESTful API endpoint in Flask involves defining a route that responds to HTTP methods (like GET, POST) and returns data—typically in JSON format.\n",
+        "Steps to Create a RESTful API Endpoint in Flask:-\n",
+        "\n",
+        "- Import Flask and JSON utilitiez\n",
+        "Initialize your Flask app\n",
+        "Define the API endpoint with appropriate HTTP methods\n",
+        "Run the Flask app"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lDERFrZ9oeRV"
+      },
+      "source": [
+        "**15. What is the purpose of Flask's jsonify() function?**\n",
+        "\n",
+        "- The jsonify() function in Flask is used to create a proper JSON response from your Python data (like dictionaries or lists).\n",
+        "Normally, if you just return a dictionary in Flask, it may not automatically set the correct content type (application/json).\n",
+        "\n",
+        "Using jsonify() ensures:\n",
+        "\n",
+        "- The response is converted to valid JSON format.\n",
+        "\n",
+        "- The response header Content-Type is set to application/json.\n",
+        "\n",
+        "- It handles encoding automatically (e.g., Unicode characters)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lUT9uEHnoGml"
+      },
+      "source": [
+        "**16. Explain Flask’s url_for() function?**\n",
+        "\n",
+        "- The url_for() function in Flask is used to build dynamic URLs for routes in your application.\n",
+        "Instead of hardcoding URLs (like \"/about\"), you can use url_for(\"function_name\"). This makes your app more flexible and maintainable — if a route changes, you don’t have to update all links manually.\n",
+        "\n",
+        "- Purpose of url_for()\n",
+        "\n",
+        "- Dynamic URL generation → Creates URLs based on route function names.\n",
+        "\n",
+        "- Avoids hardcoding → If you change the route, you don’t break links.\n",
+        "\n",
+        "- Supports query parameters → You can pass arguments to build URLs with query strings."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BA0neWFdnq-u"
+      },
+      "source": [
+        "**17. How does Flask handle static files (CSS, JavaScript, etc.)?**\n",
+        "\n",
+        "- By default, Flask expects static files to be in a folder named static at the root of your project.\n",
+        "- These files are accessible via URLs starting with /static/.\n",
+        "- For example, a file static/style.css is served at /static/style.css."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RTEYOLHZnI1Q"
+      },
+      "source": [
+        "**18. What is an API specification, and how does it help in building a flask API?**\n",
+        "\n",
+        "- An API specification is like a blueprint or contract that clearly defines how an API should work. When you are building a Flask API.\n",
+        "\n",
+        "**Specification**\n",
+        "\n",
+        "Endpoints (URLs): Define where the API resources are located (e.g., /api/users).\n",
+        "\n",
+        "HTTP Methods : State which HTTP methods are allowed (GET, POST, PUT, DELETE)\n",
+        "\n",
+        "Request Parameter: Explain what data the client must send (e.g., JSON body, query parameters)\n",
+        "\n",
+        "Request Response Formats: Describe the structure of the data returned (e.g., JSON or XML).\n",
+        "\n",
+        "Response Codes :\n",
+        "\n",
+        "Authentication/Authorization\n",
+        "\n",
+        "Data Models/Schemas\n",
+        "\n",
+        "**An API specification is very helpful because it provides:**\n",
+        "\n",
+        "1. Clear Structure and Guidelines\n",
+        "It describes endpoints (URLs), HTTP methods (GET, POST, PUT, DELETE), request parameters, and expected responses.\n",
+        "\n",
+        "Developers know exactly what to implement without confusion.\n",
+        "\n",
+        "2. Consistency Across the Team\n",
+        "If multiple developers are working on the Flask project, the API spec ensures everyone follows the same standards.\n",
+        "\n",
+        "For example: consistent naming of endpoints, data formats (JSON), and error handling.\n",
+        "\n",
+        "3. Faster Development\n",
+        "Frontend and backend teams can work in parallel.\n",
+        "\n",
+        "The frontend can use the specification to create mock APIs or test data even before the backend Flask API is ready.\n",
+        "\n",
+        "4. Improved Communication\n",
+        "The API spec acts as a common language between developers, testers, and stakeholders.\n",
+        "\n",
+        "Example: Using OpenAPI/Swagger spec, everyone can see the API structure in a clear, documented format.\n",
+        "\n",
+        "5. Easier Testing and Debugging\n",
+        "Testers can validate if the Flask API responses follow the specification.\n",
+        "\n",
+        "Helps quickly identify bugs (e.g., wrong status codes, missing fields).\n",
+        "\n",
+        "6. Better Documentation\n",
+        "Tools like Swagger UI or Redoc can automatically generate interactive documentation from the API spec.\n",
+        "\n",
+        "This makes it easy for other developers or clients to understand and use your Flask API."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "iwUhfCkdmbIN"
+      },
+      "source": [
+        "**19. What are HTTP status codes, and why are they important in a Flask API?**\n",
+        "\n",
+        "- HTTP Status Codes:\n",
+        "HTTP status codes are 3-digit numbers returned by a web server (like a Flask API) to indicate the result of a client’s request.\n",
+        "\n",
+        "They tell whether the request was successful, failed, or needs further action. They are part of the HTTP response.\n",
+        "\n",
+        "**Categorized into groups based on their first digit:**\n",
+        "\n",
+        "- 1xx: Informational (rarely used in APIs)\n",
+        "- 2xx: Success (e.g., 200 OK, 201 Created)\n",
+        "- 3xx: Redirection (e.g., 301 Moved Permanently)\n",
+        "- 4xx: Client errors (e.g., 400 Bad Request, 404 Not Found)\n",
+        "- 5xx: Server errors (e.g., 500 Internal Server Error)\n",
+        "**Importancwe of HTTP Status Codes in a Flask API:**\n",
+        "\n",
+        "Clear communication between server and client.\n",
+        "\n",
+        "Error handling → Helps frontend/mobile apps respond properly.\n",
+        "\n",
+        "Standardization → Developers understand the API easily.\n",
+        "\n",
+        "Debugging → Easier to identify whether the issue is client-side or server-side."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qWgTAEBjmH9I"
+      },
+      "source": [
+        "**20. How do you handle POST requests in Flask?**\n",
+        "\n",
+        "- In Flask, POST requests are used to send data from the client to the server (e.g., creating a new record). We handle them by defining a route with methods=['POST'] and using the request object to access the data.\n",
+        "\n",
+        "Step-by-step: Handling POST Requests in Flask:-\n",
+        "\n",
+        "- Import necessary modules\n",
+        "- Create your Flask app\n",
+        "- Define a route that accepts POST requests\n",
+        "- Run your app"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "851ZfISIk5kN"
+      },
+      "source": [
+        "**21. How would you secure a Flask API?**\n",
+        "\n",
+        "- To secure a Flask API, we use the following techniques:\n",
+        "\n",
+        "- Use HTTPS → Encrypts data between client and server.\n",
+        "\n",
+        "- Authentication & Authorization → Use API keys or JWT tokens to allow only valid users.\n",
+        "\n",
+        "- Input Validation → Check and sanitize all incoming data to prevent attacks.\n",
+        "\n",
+        "- Rate Limiting → Limit the number of requests to stop abuse.\n",
+        "\n",
+        "- Error Handling → Do not show sensitive server errors to the client.\n",
+        "\n",
+        "- Secure Database Access → Use environment variables and parameterized queries.\n",
+        "\n",
+        "- CORS → Allow only trusted domains to access the API."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HYYiu8xPj4i7"
+      },
+      "source": [
+        "**22. What is the significance of the Flask-RESTful extension?**\n",
+        "\n",
+        "- Flask-RESTful is an extension for Flask that makes it easier to build RESTful APIs.\n",
+        "\n",
+        "- Significance of Flask-RESTful:-\n",
+        "\n",
+        "- Simplifies Resource-Based API Design\n",
+        "- Automatic Request Parsing and Validation\n",
+        "- Built-in Response Formatting\n",
+        "- Improved Routing\n",
+        "- Error Handling and Abortion\n",
+        "- Extensible and Compatible\n",
+        "- Benefits\n",
+        "\n",
+        "- Simplifies API Development → Provides classes and tools to quickly create REST APIs.\n",
+        "\n",
+        "- Resource-Based Structure → Lets you define API endpoints as Python classes (Resource), which makes code more organized.\n",
+        "\n",
+        "- Automatic HTTP Method Handling → Easily supports GET, POST, PUT, DELETE inside resource classes.\n",
+        "\n",
+        "- Request Parsing → Provides reqparse for validating and parsing request data.\n",
+        "\n",
+        "- Better Readability & Maintainability → Code is cleaner and easier to manage for larger projects.\n",
+        "\n",
+        "- Error Handling → Provides built-in error handling for APIs."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "u7yAZGbMH9Dj"
+      },
+      "source": [
+        "**23. What is the role of Flask’s session object?**\n",
+        "\n",
+        "- The session object in Flask is used to store information about a user across multiple requests.\n",
+        "\n",
+        "- It works like a temporary storage (dictionary) that remembers data for a user while they are browsing the app.\n",
+        "\n",
+        "- Flask stores session data on the server-side (securely signed with a secret key), while the client only keeps a session ID in a cookie.\n",
+        "\n",
+        "- Role of Flask’s session Object\n",
+        "\n",
+        "- Stores data on a per-user basis between requests (like co kookies, but more secure).\n",
+        "Keeps user state without requiring server-side storage (data is stored client-side but signed to prevent tampering).\n",
+        "Useful for things like:\n",
+        "User authentication sessions (e.g., remembering logged-in users).\n",
+        "Flash messages.\n",
+        "Storing user preferences temporarily.\n",
+        "Uses:\n",
+        "\n",
+        "User Login State → Keep a user logged in as they move between pages.\n",
+        "\n",
+        "Temporary Data Storage → Store small pieces of data like preferences, shopping cart, etc.\n",
+        "\n",
+        "Secure → Data is cryptographically signed so it cannot be tampered with."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IidFP7ULrKlM"
+      },
+      "source": [
+        "# Practical Questions\n",
+        "\n",
+        "---\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "NXxI6lzs1mYa"
+      },
+      "outputs": [],
+      "source": [
+        "#1.How do you create a basic Flask application?\n",
+        "\n",
+        "from flask import Flask\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def hello_world():\n",
+        "    return 'Hello World!!'\n",
+        "\n",
+        "if __name__ == '__main__':\n",
+        "    app.run()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true,
+          "base_uri": "https://localhost:8080/",
+          "height": 0
+        },
+        "id": "an6y6rtZ2Tu6",
+        "outputId": "492e343d-9e8e-4797-876f-6dd0c00d75a4"
+      },
+      "outputs": [
+        {
+          "metadata": {
+            "tags": null
+          },
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            " * Serving Flask app '__main__'\n",
+            " * Debug mode: off\n"
+          ]
+        },
+        {
+          "metadata": {
+            "tags": null
+          },
+          "name": "stderr",
+          "output_type": "stream",
+          "text": [
+            "INFO:werkzeug:\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n",
+            " * Running on http://127.0.0.1:5000\n",
+            "INFO:werkzeug:\u001b[33mPress CTRL+C to quit\u001b[0m\n"
+          ]
+        }
+      ],
+      "source": [
+        "#2. How do you serve static files like images or CSS in Flask?\n",
+        "\n",
+        "import os\n",
+        "\n",
+        "os.makedirs('static', exist_ok=True)\n",
+        "\n",
+        "with open('static/style.css', 'w') as f:\n",
+        "    f.write('body {background-color: light green;}')\n",
+        "\n",
+        "from flask import Flask, url_for\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def home():\n",
+        "    return '''\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "        Hello, styled Flask!\n",
+        "\n",
+        "\n",
+        "    '''.format(url_for('static', filename='style.css'))\n",
+        "\n",
+        "if __name__ == '__main__':\n",
+        "    app.run()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "w53FLsh43B7s"
+      },
+      "outputs": [],
+      "source": [
+        "#3. How do you define different routes with different HTTP methods in Flask?\n",
+        "from flask import Flask, request\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def home():\n",
+        "    return \"This is a GET request\"\n",
+        "\n",
+        "    @app.route('/submit', methods=['POST'])\n",
+        "    def submit():\n",
+        "        data = request.form.get('data')\n",
+        "            return f\"Received POST data: {data}\"\n",
+        "\n",
+        "\n",
+        "            @app.route('/both', methods=['GET', 'POST'])\n",
+        "            def both_methods():\n",
+        "                if request.method == 'POST':\n",
+        "                        return \"POST request received\"\n",
+        "                            else:\n",
+        "                                    return \"GET request received\"\n",
+        "\n",
+        "                                    if __name__ == '__main__':\n",
+        "                                        app.run(debug=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "zusI_ZEUGa-r"
+      },
+      "outputs": [],
+      "source": [
+        "#4.  How do you render HTML templates in Flask?\n",
+        "from flask import Flask, render_template\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def home():\n",
+        "    return render_template('index.html')\n",
+        "\n",
+        "    if __name__ == '__main__':\n",
+        "        app.run(debug=True)\n",
+        "\n",
+        "\n",
+        "        #templates/index.html\n",
+        "\n",
+        "        '''\n",
+        "\n",
+        "\n",
+        "            Flask Template\n",
+        "\n",
+        "\n",
+        "                Hello from Flask template!\n",
+        "\n",
+        "                '''"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "oQDf3nmaGnpc"
+      },
+      "outputs": [],
+      "source": [
+        "#5. How can you generate URLs for routes in Flask using url_for?\n",
+        "from flask import Flask, url_for\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def home():\n",
+        "    return \"Home Page\"\n",
+        "\n",
+        "    @app.route('/user/')\n",
+        "    def profile(username):\n",
+        "        return f\"User: {username}\"\n",
+        "\n",
+        "        @app.route('/links')\n",
+        "        def links():\n",
+        "            # Generate URLs dynamically\n",
+        "                home_url = url_for('home')\n",
+        "                    profile_url = url_for('profile', username='lusi')\n",
+        "                        return f'Home URL: {home_url}  Profile URL: {profile_url}'\n",
+        "\n",
+        "                        if __name__ == '__main__':\n",
+        "                            app.run(debug=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "-JyVh0k5G-ZE"
+      },
+      "outputs": [],
+      "source": [
+        "#6. How do you handle forms in Flask?\n",
+        "from flask import Flask, render_template, request\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/form', methods=['GET', 'POST'])\n",
+        "def form():\n",
+        "    if request.method == 'POST':\n",
+        "            name = request.form['name']\n",
+        "                    email = request.form['email']\n",
+        "                            return f\"Received: Name={name}, Email={email}\"\n",
+        "                                return render_template('form.html')\n",
+        "\n",
+        "                                if __name__ == '__main__':\n",
+        "                                    app.run(debug=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "A2xRT5XxG_rY"
+      },
+      "outputs": [],
+      "source": [
+        "#7.  How can you validate form data in Flask?\n",
+        "\n",
+        "from flask import Flask, request, render_template\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/form', methods=['GET', 'POST'])\n",
+        "def form():\n",
+        "    error = None\n",
+        "        if request.method == 'POST':\n",
+        "                name = request.form.get('name')\n",
+        "                        email = request.form.get('email')\n",
+        "\n",
+        "                                if not name or not email:\n",
+        "                                            error = \"Both name and email are required!\"\n",
+        "                                                    else:\n",
+        "                                                                return f\"Form submitted: Name = {name}, Email = {email}\"\n",
+        "\n",
+        "                                                                    return render_template('form.html', error=error)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8. How do you manage sessions in Flask?\n",
+        "from flask import Flask, session, redirect, url_for, request\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "app.secret_key = 'your_secret_key'  # Required to use sessions securely\n",
+        "\n",
+        "@app.route('/')\n",
+        "def index():\n",
+        "    if 'username' in session:\n",
+        "            return f'Logged in as {session[\"username\"]}'\n",
+        "                return 'You are not logged in.'\n",
+        "\n",
+        "                @app.route('/login', methods=['GET', 'POST'])\n",
+        "                def login():\n",
+        "                    if request.method == 'POST':\n",
+        "                            session['username'] = request.form['username']\n",
+        "                                    return redirect(url_for('index'))\n",
+        "                                        return '''\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "                                                                                    '''\n",
+        "\n",
+        "                                                                                    @app.route('/logout')\n",
+        "                                                                                    def logout():\n",
+        "                                                                                        session.pop('username', None)\n",
+        "                                                                                            return redirect(url_for('index'))\n",
+        "\n",
+        "                                                                                            if __name__ == '__main__':\n",
+        "                                                                                                app.run(debug=True)"
+      ],
+      "metadata": {
+        "id": "oBFf_jxLPMQc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "UERz0RC2IuBQ"
+      },
+      "outputs": [],
+      "source": [
+        "#9. How do you redirect to a different route in Flask?\n",
+        "from flask import Flask, redirect, url_for\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def home():\n",
+        "    return 'Home Page'\n",
+        "\n",
+        "    @app.route('/login')\n",
+        "    def login():\n",
+        "        return 'Login Page'\n",
+        "\n",
+        "        @app.route('/go-to-login')\n",
+        "        def go_to_login():\n",
+        "            return redirect(url_for('login'))  # Redirects to /login\n",
+        "\n",
+        "            if __name__ == '__main__':\n",
+        "                app.run(debug=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "S03LO8RwIaH1"
+      },
+      "outputs": [],
+      "source": [
+        "#10.  How do you handle errors in Flask (e.g., 404)?\n",
+        "from flask import Flask, render_template\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def home():\n",
+        "    return 'Welcome to the homepage!'\n",
+        "\n",
+        "    # Handle 404 errors (Page Not Found)\n",
+        "    @app.errorhandler(404)\n",
+        "    def page_not_found(e):\n",
+        "        return render_template('404.html'), 404\n",
+        "\n",
+        "        if __name__ == '__main__':\n",
+        "            app.run(debug=True)\n",
+        "\n",
+        "\n",
+        "            Page Not Found\n",
+        "\n",
+        "                404 - Page Not Found\n",
+        "                    Oops! The page you're looking for doesn't exist.\n",
+        "                        Go to Home"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "ywzJDvirIPoF"
+      },
+      "outputs": [],
+      "source": [
+        "#11. How do you structure a Flask app using Blueprints?\n",
+        "from flask import Blueprint, render_template\n",
+        "\n",
+        "auth_bp = Blueprint('auth', __name__, url_prefix='/auth')\n",
+        "\n",
+        "@auth_bp.route('/login')\n",
+        "def login():\n",
+        "    return render_template('login.html')\n",
+        "    from flask import Flask\n",
+        "    from auth.routes import auth_bp  # Import your blueprint\n",
+        "\n",
+        "    app = Flask(__name__)\n",
+        "    app.secret_key = 'your_secret'\n",
+        "\n",
+        "    # Register blueprint\n",
+        "    app.register_blueprint(auth_bp)\n",
+        "\n",
+        "    @app.route('/')\n",
+        "    def home():\n",
+        "        return \"Home Page\"\n",
+        "\n",
+        "        if __name__ == '__main__':\n",
+        "            app.run(debug=True)\n",
+        "\n",
+        "\n",
+        "            Login\n",
+        "\n",
+        "                Login Page (from auth blueprint)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "U4yF7bd7ILP6"
+      },
+      "outputs": [],
+      "source": [
+        "#12. How do you define a custom Jinja filter in Flask?\n",
+        "def reverse_string(s):\n",
+        "    return s[::-1]\n",
+        "    from flask import Flask\n",
+        "\n",
+        "    app = Flask(__name__)\n",
+        "\n",
+        "    @app.template_filter('reverse')\n",
+        "    def reverse_string(s):\n",
+        "        return s[::-1]\n",
+        "        app.jinja_env.filters['reverse'] = reverse_string"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Jk5W1WBJIAZW"
+      },
+      "outputs": [],
+      "source": [
+        "#13. How can you redirect with query parameters in Flask?\n",
+        "from flask import Flask, redirect, url_for, request\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/')\n",
+        "def home():\n",
+        "    return redirect(url_for('greet', name='Lusi', lang='en'))\n",
+        "\n",
+        "    @app.route('/greet')\n",
+        "    def greet():\n",
+        "        name = request.args.get('name')\n",
+        "            lang = request.args.get('lang')\n",
+        "                return f\"Hello {name}, language: {lang}\"\n",
+        "\n",
+        "                if __name__ == '__main__':\n",
+        "                    app.run(debug=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fsmbviesHyXr"
+      },
+      "outputs": [],
+      "source": [
+        "#14.  How do you return JSON responses in Flask?\n",
+        "from flask import Flask, jsonify\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/api/data')\n",
+        "def get_data():\n",
+        "    return jsonify({\n",
+        "            'name': 'Lusi',\n",
+        "                    'age': 13,\n",
+        "                            'status': 'active'\n",
+        "                                })\n",
+        "\n",
+        "                                if __name__ == '__main__':\n",
+        "                                    app.run(debug=True)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "bKMSW3P7Hn4w"
+      },
+      "outputs": [],
+      "source": [
+        "#15. How do you capture URL parameters in Flask?\n",
+        "from flask import Flask\n",
+        "\n",
+        "app = Flask(__name__)\n",
+        "\n",
+        "@app.route('/user/')\n",
+        "def show_user(username):\n",
+        "    return f'Hello, {username}!'"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
